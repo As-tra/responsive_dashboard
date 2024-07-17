@@ -16,22 +16,29 @@ class CustomDrawer extends StatelessWidget {
       child: CustomScrollView(
         slivers: [
           SliverToBoxAdapter(
-            child: UserInfoListTile(
-              user: UserInfoModel(
-                title: 'Lekan Okeowo',
-                subtitle: 'demo@gmail.com',
-                image: Assets.imagesAvatar3,
-              ),
+            child: Column(
+              children: [
+                SizedBox(height: 40),
+                UserInfoListTile(
+                  user: UserInfoModel(
+                    title: 'Lekan Okeowo',
+                    subtitle: 'demo@gmail.com',
+                    image: Assets.imagesAvatar3,
+                  ),
+                ),
+                SizedBox(height: 8),
+              ],
             ),
           ),
-          SliverToBoxAdapter(child: const SizedBox(height: 8)),
           const CustomDrawerList(),
           const SliverFillRemaining(
             hasScrollBody: false,
             child: Column(
               children: [
-                Expanded(child: SizedBox()),
-                SizedBox(height: 32),
+                Expanded(
+                    child: SizedBox(
+                  width: 20,
+                )),
                 InActiveDrawerItem(
                   drawerItemModel: DrawerItemModel(
                       image: Assets.imagesSetting, title: 'Setting system'),
