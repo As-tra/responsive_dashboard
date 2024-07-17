@@ -21,11 +21,9 @@ class _CustomDrawerListState extends State<CustomDrawerList> {
   int current = 0;
   @override
   Widget build(BuildContext context) {
-    return Padding(
+    return SliverPadding(
       padding: const EdgeInsets.symmetric(vertical: 20),
-      child: ListView.separated(
-        shrinkWrap: true,
-        physics: const NeverScrollableScrollPhysics(),
+      sliver: SliverList.separated(
         itemCount: drawerItems.length,
         itemBuilder: (context, index) {
           return GestureDetector(
