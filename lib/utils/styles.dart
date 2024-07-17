@@ -23,7 +23,7 @@ abstract class Styles {
     fontFamily: kFontFamily,
     fontSize: 16,
     fontWeight: FontWeight.bold,
-    color: Color(0xff4EB7F2),
+    color: kprimaryColor,
   );
   static const styleSemiBold20 = TextStyle(
     fontFamily: kFontFamily,
@@ -46,7 +46,7 @@ abstract class Styles {
     fontFamily: kFontFamily,
     fontSize: 24,
     fontWeight: FontWeight.w600,
-    color: Color(0xff4EB7F2),
+    color: kprimaryColor,
   );
   static const styleRegular14 = TextStyle(
     fontFamily: kFontFamily,
@@ -57,6 +57,6 @@ abstract class Styles {
     fontFamily: kFontFamily,
     fontSize: 18,
     fontWeight: FontWeight.w600,
-    color: Color(0xff4EB7F2),
+    color: kprimaryColor,
   );
 }
