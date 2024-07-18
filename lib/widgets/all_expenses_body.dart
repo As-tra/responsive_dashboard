@@ -3,7 +3,7 @@ import 'package:responsive_dashboard/models/all_expenses_item_model.dart';
 import 'package:responsive_dashboard/utils/assets.dart';
 import 'package:responsive_dashboard/widgets/all_expenses_item.dart';
 
-class AllExpensesBody extends StatelessWidget {
+class AllExpensesBody extends StatefulWidget {
   const AllExpensesBody({super.key});
 
   static const List<AllExpensesItemModel> items = [
@@ -28,17 +28,35 @@ class AllExpensesBody extends StatelessWidget {
   ];
 
   @override
+  State<AllExpensesBody> createState() => _AllExpensesBodyState();
+}
+
+class _AllExpensesBodyState extends State<AllExpensesBody> {
+  int currentValue = 0;
+
+  @override
   Widget build(BuildContext context) {
     return Row(
-        children: items.asMap().entries.map(
+        children: AllExpensesBody.items.asMap().entries.map(
       (ele) {
         return Expanded(
-            child: Padding(
-          padding: EdgeInsets.only(right: ele.key != items.length - 1 ? 12 : 0),
-          child: AllExpensesItem(
-            itemModel: ele.value,
+          child: Padding(
+            padding: EdgeInsets.only(
+                right: ele.key != AllExpensesBody.items.length - 1 ? 12 : 0),
+            child: GestureDetector(
+              onTap: () {
+                setState(() {});
+                if (currentValue != ele.key) {
+                  currentValue = ele.key;
+                }
+              },
+              child: AllExpensesItem(
+                itemModel: ele.value,
+                isSelected: ele.key == currentValue,
+              ),
+            ),
           ),
-        ));
+        );
       },
     ).toList());
   }

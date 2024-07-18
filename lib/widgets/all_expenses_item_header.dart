@@ -1,23 +1,31 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:responsive_dashboard/constants.dart';
 
 class AllExpensesItemHeader extends StatelessWidget {
-  const AllExpensesItemHeader({super.key, required this.image});
+  const AllExpensesItemHeader(
+      {super.key, required this.image, this.isActive = false});
   final String image;
+  final bool isActive;
 
   @override
   Widget build(BuildContext context) {
     return Row(
       children: [
         CircleAvatar(
-          backgroundColor: const Color(0xffFAFAFA),
+          backgroundColor:
+              isActive ? Colors.white.withOpacity(.1) : const Color(0xffFAFAFA),
           radius: 30,
-          child: SvgPicture.asset(image),
+          child: SvgPicture.asset(
+            image,
+            colorFilter: ColorFilter.mode(
+                isActive ? Colors.white : kprimaryColor, BlendMode.srcIn),
+          ),
         ),
         const Spacer(),
-        const Icon(
+        Icon(
           Icons.arrow_forward_ios_rounded,
-          color: Color(0xff064061),
+          color: isActive ? Colors.white : const Color(0xff064061),
         ),
       ],
     );
