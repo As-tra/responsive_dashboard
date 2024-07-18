@@ -11,8 +11,14 @@ class AllExpensesItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return isSelected
-        ? ActiveAllExpensesItem(itemModel: itemModel)
-        : InActiveAllExpensesItem(itemModel: itemModel);
+    return AnimatedSwitcher(
+      duration: const Duration(milliseconds: 300),
+      transitionBuilder: (child, animation) {
+        return ScaleTransition(scale: animation, child: child);
+      },
+      child: isSelected
+          ? ActiveAllExpensesItem(itemModel: itemModel)
+          : InActiveAllExpensesItem(itemModel: itemModel),
+    );
   }
 }
