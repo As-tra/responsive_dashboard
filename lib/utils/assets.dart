@@ -21,6 +21,10 @@ class Assets {
   /// assets/images/bankCard.svg
   static const String imagesBankCard = "assets/images/bankCard.svg";
 
+  /// Assets for imagesCard
+  /// assets/images/card.png
+  static const String imagesCard = "assets/images/card.png";
+
   /// Assets for imagesDashboard
   /// assets/images/dashboard.svg
   static const String imagesDashboard = "assets/images/dashboard.svg";
