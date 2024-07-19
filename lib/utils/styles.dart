@@ -5,19 +5,19 @@ abstract class Styles {
   static const styleRegular16 = TextStyle(
     fontFamily: kFontFamily,
     fontSize: 16,
-    color: Color(0xff064061),
+    color: ksecondaryColor,
   );
   static const styleMeduim16 = TextStyle(
     fontFamily: kFontFamily,
     fontSize: 16,
     fontWeight: FontWeight.w500,
-    color: Color(0xff064061),
+    color: ksecondaryColor,
   );
   static const styleSemiBold16 = TextStyle(
     fontFamily: kFontFamily,
     fontSize: 16,
     fontWeight: FontWeight.w600,
-    color: Color(0xff064061),
+    color: ksecondaryColor,
   );
   static const styleBold16 = TextStyle(
     fontFamily: kFontFamily,
@@ -29,7 +29,7 @@ abstract class Styles {
     fontFamily: kFontFamily,
     fontSize: 20,
     fontWeight: FontWeight.w600,
-    color: Color(0xff064061),
+    color: ksecondaryColor,
   );
   static const styleMeduim20 = TextStyle(
     fontFamily: kFontFamily,
