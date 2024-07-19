@@ -14,7 +14,7 @@ class CustomDropDown extends StatefulWidget {
 }
 
 class _CustomDropDownState extends State<CustomDropDown> {
-  List<DropdownMenuItem> items = [
+  List<DropdownMenuItem> items = const [
     DropdownMenuItem(value: 'monthly', child: Text('monthly')),
     DropdownMenuItem(value: 'weekly', child: Text('weekly')),
     DropdownMenuItem(value: 'Daily', child: Text('Daily')),
@@ -26,7 +26,7 @@ class _CustomDropDownState extends State<CustomDropDown> {
       width: 134,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(12),
-        border: Border.all(color: Color(0xffF1F1F1)),
+        border: Border.all(color: const Color(0xffF1F1F1)),
       ),
       child: DropdownButtonHideUnderline(
         child: ButtonTheme(
