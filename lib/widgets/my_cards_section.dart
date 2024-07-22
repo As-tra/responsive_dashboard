@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_dashboard/utils/styles.dart';
-import 'package:responsive_dashboard/widgets/custom_container.dart';
 import 'package:responsive_dashboard/widgets/dots_indicator.dart';
 import 'package:responsive_dashboard/widgets/my_cards_page_view.dart';
 

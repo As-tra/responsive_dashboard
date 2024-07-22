@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_dashboard/widgets/all_expenses_body.dart';
-import 'package:responsive_dashboard/widgets/all_expenses_header.dart';
+import 'package:responsive_dashboard/widgets/custom_header.dart';
 import 'package:responsive_dashboard/widgets/custom_container.dart';
 
 class AllExpenses extends StatelessWidget {
@@ -13,7 +13,7 @@ class AllExpenses extends StatelessWidget {
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          AllExpensesHeader(),
+          CustomHeader(title: 'All Expenses',),
           SizedBox(height: 16),
           AllExpensesBody(),
         ],
@@ -21,4 +21,3 @@ class AllExpenses extends StatelessWidget {
     );
   }
 }
-

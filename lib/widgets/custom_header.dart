@@ -2,19 +2,20 @@ import 'package:flutter/material.dart';
 import 'package:responsive_dashboard/utils/styles.dart';
 import 'package:responsive_dashboard/widgets/custom_drop_down.dart';
 
-class AllExpensesHeader extends StatelessWidget {
-  const AllExpensesHeader({super.key});
+class CustomHeader extends StatelessWidget {
+  const CustomHeader({super.key, required this.title});
+  final String title;
 
   @override
   Widget build(BuildContext context) {
-    return const Row(
+    return  Row(
       children: [
         Text(
-          'All Expenses',
+          title,
           style: Styles.styleSemiBold20,
         ),
-        Spacer(),
-        CustomDropDown(),
+        const Spacer(),
+        const CustomDropDown(),
       ],
     );
   }
