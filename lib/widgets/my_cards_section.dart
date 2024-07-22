@@ -32,25 +32,22 @@ class _MyCardsSectionState extends State<MyCardsSection> {
 
   @override
   Widget build(BuildContext context) {
-    return  CustomContainer(
-      padding: const EdgeInsets.all(24),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          const Text(
-            'My card',
-            style: Styles.styleSemiBold20,
-          ),
-          const SizedBox(height: 20),
-          MyCardsPageView(
-            pageController: pageController,
-          ),
-          const SizedBox(height: 20),
-          DotsIndicator(
-            currentindex: currentPageIndex,
-          ),
-        ],
-      ),
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        const Text(
+          'My card',
+          style: Styles.styleSemiBold20,
+        ),
+        const SizedBox(height: 20),
+        MyCardsPageView(
+          pageController: pageController,
+        ),
+        const SizedBox(height: 20),
+        DotsIndicator(
+          currentindex: currentPageIndex,
+        ),
+      ],
     );
   }
 }

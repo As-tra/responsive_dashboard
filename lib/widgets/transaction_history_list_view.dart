@@ -26,13 +26,14 @@ class TransactionHistoryListView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
+    return ListView.separated(
       shrinkWrap: true,
       physics: const ScrollPhysics(),
       itemCount: items.length,
       itemBuilder: (context, index) {
         return TransactionItem(item: items[index]);
       },
+      separatorBuilder: (context, index) => const SizedBox(height: 12),
     );
   }
 }

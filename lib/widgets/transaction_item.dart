@@ -16,9 +16,12 @@ class TransactionItem extends StatelessWidget {
       ),
       elevation: 0,
       child: ListTile(
-        title: Text(
-          item.title,
-          style: Styles.styleSemiBold16,
+        title: Padding(
+          padding: const EdgeInsets.only(bottom: 8.0),
+          child: Text(
+            item.title,
+            style: Styles.styleSemiBold16,
+          ),
         ),
         subtitle: Text(
           item.date,
