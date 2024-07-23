@@ -25,4 +25,3 @@ class DashboardDesktopLayout extends StatelessWidget {
     );
   }
 }
-

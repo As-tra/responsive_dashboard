@@ -9,6 +9,7 @@ class IncomeDetailsItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
+      dense: true,
       leading: CircleAvatar(
         radius: 6,
         backgroundColor: itemDetailModel.bulletColor,

@@ -10,7 +10,7 @@ class TransactionHistory extends StatelessWidget {
     return const Column(
       children: [
         TransactionHIstoryHeader(),
-        SizedBox(height: 20),
+        SizedBox(height: 10),
         TransactionHistoryListView(),
       ],
     );
