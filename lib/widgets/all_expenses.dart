@@ -13,7 +13,9 @@ class AllExpenses extends StatelessWidget {
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          CustomHeader(title: 'All Expenses',),
+          CustomHeader(
+            title: 'All Expenses',
+          ),
           SizedBox(height: 16),
           AllExpensesBody(),
         ],
