@@ -11,7 +11,11 @@ class IncomeSection extends StatelessWidget {
     return const CustomContainer(
       padding: EdgeInsets.all(20),
       child: Column(
-        children: [CustomHeader(title: 'Income'), IncomeSectionBody()],
+        children: [
+          CustomHeader(title: 'Income'),
+          SizedBox(height: 24),
+          IncomeSectionBody(),
+        ],
       ),
     );
   }

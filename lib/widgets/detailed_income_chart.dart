@@ -45,7 +45,10 @@ class _DetailedIncomeChartState extends State<DetailedIncomeChart> {
           final int index = entry.key;
           final ItemDetailModel item = entry.value;
           return PieChartSectionData(
-            titleStyle: Styles.styleMeduim16.copyWith(color: Colors.white),
+            titlePositionPercentageOffset:
+                activeSectionIndex == index ? 1.5 : null,
+            titleStyle: Styles.styleMeduim16(context).copyWith(
+                color: activeSectionIndex == index ? null : Colors.white),
             title: activeSectionIndex == index
                 ? item.title
                 : '${item.percentage}%',

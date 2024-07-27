@@ -16,11 +16,11 @@ class IncomeDetailsItem extends StatelessWidget {
       ),
       title: Text(
         itemDetailModel.title,
-        style: Styles.styleRegular16,
+        style: Styles.styleRegular16(context),
       ),
       trailing: Text(
         '${itemDetailModel.percentage}%',
-        style: Styles.styleMeduim16.copyWith(color: const Color(0xff208CC8)),
+        style: Styles.styleMeduim16(context).copyWith(color: const Color(0xff208CC8)),
       ),
     );
   }

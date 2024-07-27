@@ -20,18 +20,18 @@ class TransactionItem extends StatelessWidget {
           padding: const EdgeInsets.only(bottom: 8.0),
           child: Text(
             item.title,
-            style: Styles.styleSemiBold16,
+            style: Styles.styleSemiBold16(context),
           ),
         ),
         subtitle: Text(
           item.date,
-          style: Styles.styleMeduim16.copyWith(
+          style: Styles.styleMeduim16(context).copyWith(
             color: const Color(0xffaaaaaa),
           ),
         ),
         trailing: Text(
           item.amout,
-          style: Styles.styleSemiBold20.copyWith(
+          style: Styles.styleSemiBold20(context).copyWith(
             color: item.type == TransactionType.deposit
                 ? const Color(0xff7DD97B)
                 : const Color(0xffF3735E),

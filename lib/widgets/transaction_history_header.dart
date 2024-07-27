@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:responsive_dashboard/constants.dart';
 import 'package:responsive_dashboard/utils/styles.dart';
@@ -13,13 +12,13 @@ class TransactionHIstoryHeader extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        const Text(
+        Text(
           'Transaction History',
-          style: Styles.styleSemiBold20,
+          style: Styles.styleSemiBold20(context),
         ),
         Text(
           'See all',
-          style: Styles.styleMeduim16.copyWith(color: kprimaryColor),
+          style: Styles.styleMeduim16(context).copyWith(color: kprimaryColor),
         ),
       ],
     );

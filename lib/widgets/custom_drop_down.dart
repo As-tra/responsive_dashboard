@@ -39,7 +39,7 @@ class _CustomDropDownState extends State<CustomDropDown> {
               setState(() {});
               selectedValue = value;
             },
-            style: Styles.styleMeduim16,
+            style: Styles.styleMeduim16(context),
           ),
         ),
       ),

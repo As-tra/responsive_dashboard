@@ -13,7 +13,7 @@ class CustomInfoWidget extends StatelessWidget {
       children: [
         Text(
           title,
-          style: Styles.styleMeduim16,
+          style: Styles.styleMeduim16(context),
         ),
         const SizedBox(height: 12),
         CustomTextField(hintText: hint),

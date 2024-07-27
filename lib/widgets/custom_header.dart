@@ -12,7 +12,7 @@ class CustomHeader extends StatelessWidget {
       children: [
         Text(
           title,
-          style: Styles.styleSemiBold20,
+          style: Styles.styleSemiBold20(context),
         ),
         const Spacer(),
         const CustomDropDown(),

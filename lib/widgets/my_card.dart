@@ -24,22 +24,22 @@ class MyCard extends StatelessWidget {
             ListTile(
               title: Text(
                 'Name card',
-                style: Styles.styleRegular16.copyWith(color: Colors.white),
+                style: Styles.styleRegular16(context).copyWith(color: Colors.white),
               ),
-              subtitle: const Text(
+              subtitle: Text(
                 'Syah Bandi',
-                style: Styles.styleMeduim20,
+                style: Styles.styleMeduim20(context),
               ),
             ),
             const Spacer(),
             Text(
               '0918 8124 0042 8129',
-              style: Styles.styleSemiBold24.copyWith(color: Colors.white),
+              style: Styles.styleSemiBold24(context).copyWith(color: Colors.white),
             ),
             const SizedBox(height: 12),
             Text(
               '12/20 - 124',
-              style: Styles.styleRegular16.copyWith(color: Colors.white),
+              style: Styles.styleRegular16(context).copyWith(color: Colors.white),
             ),
             const SizedBox(height: 26),
           ],
