@@ -19,18 +19,21 @@ class IncomeSectionBody extends StatelessWidget {
               child: DetailedIncomeChart(),
             ),
           )
-        : const Row(
-            children: [
-              Expanded(
-                flex: 1,
-                child: IncomeChart(),
-              ),
-              SizedBox(width: 40),
-              Expanded(
-                flex: 2,
-                child: IncomeDetails(),
-              ),
-            ],
+        :
+        const Expanded(
+            child: Row(
+              children: [
+                Expanded(
+                  flex: 1,
+                  child: IncomeChart(),
+                ),
+                SizedBox(width: 40),
+                Expanded(
+                  flex: 2,
+                  child: IncomeDetails(),
+                ),
+              ],
+            ),
           );
   }
 }

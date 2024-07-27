@@ -8,8 +8,8 @@ class IncomeDetailsItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-   
     return ListTile(
+      contentPadding: EdgeInsets.zero,
       leading: CircleAvatar(
         radius: 6,
         backgroundColor: itemDetailModel.bulletColor,
@@ -20,7 +20,8 @@ class IncomeDetailsItem extends StatelessWidget {
       ),
       trailing: Text(
         '${itemDetailModel.percentage}%',
-        style: Styles.styleMeduim16(context).copyWith(color: const Color(0xff208CC8)),
+        style: Styles.styleMeduim16(context)
+            .copyWith(color: const Color(0xff208CC8)),
       ),
     );
   }

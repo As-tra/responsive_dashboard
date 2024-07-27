@@ -10,7 +10,6 @@ class MyCard extends StatelessWidget {
     return AspectRatio(
       aspectRatio: 420 / 215,
       child: Container(
-        padding: const EdgeInsets.all(24),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(12),
           image: const DecorationImage(
@@ -22,9 +21,14 @@ class MyCard extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.end,
           children: [
             ListTile(
+              contentPadding: const EdgeInsets.symmetric(
+                horizontal: 24,
+                vertical: 16,
+              ),
               title: Text(
                 'Name card',
-                style: Styles.styleRegular16(context).copyWith(color: Colors.white),
+                style: Styles.styleRegular16(context)
+                    .copyWith(color: Colors.white),
               ),
               subtitle: Text(
                 'Syah Bandi',
@@ -32,16 +36,30 @@ class MyCard extends StatelessWidget {
               ),
             ),
             const Spacer(),
-            Text(
-              '0918 8124 0042 8129',
-              style: Styles.styleSemiBold24(context).copyWith(color: Colors.white),
+            Padding(
+              padding: const EdgeInsets.only(right: 24),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children: [
+                  Text(
+                    '0918 8124 0042 8129',
+                    style: Styles.styleSemiBold24(context)
+                        .copyWith(color: Colors.white),
+                  ),
+                  const SizedBox(height: 12),
+                  Text(
+                    '12/20 - 124',
+                    style: Styles.styleRegular16(context)
+                        .copyWith(color: Colors.white),
+                  ),
+                ],
+              ),
             ),
-            const SizedBox(height: 12),
-            Text(
-              '12/20 - 124',
-              style: Styles.styleRegular16(context).copyWith(color: Colors.white),
+            const Flexible(
+              child: SizedBox(
+                height: 24,
+              ),
             ),
-            const SizedBox(height: 26),
           ],
         ),
       ),

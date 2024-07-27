@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:responsive_dashboard/models/item_detail_model.dart';
 import 'package:responsive_dashboard/widgets/icome_details_item.dart';
@@ -33,7 +32,7 @@ class IncomeDetails extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children:
-          items.map((ele) => IncomeDetailsItem(itemDetailModel: ele)).toList(),
+          items.map((ele) => Flexible(child: IncomeDetailsItem(itemDetailModel: ele))).toList(),
     );
   }
 }
