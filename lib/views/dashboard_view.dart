@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_dashboard/constants.dart';
+import 'package:responsive_dashboard/utils/size_config.dart';
 import 'package:responsive_dashboard/widgets/adaptive_layout_widget.dart';
 import 'package:responsive_dashboard/widgets/custom_drawer.dart';
 import 'package:responsive_dashboard/widgets/dashboard_desktop_layout.dart';
@@ -21,7 +22,7 @@ class _DashboardViewState extends State<DashboardView> {
     return Scaffold(
       key: key,
       backgroundColor: kbgColor,
-      appBar: MediaQuery.sizeOf(context).width < 800
+      appBar: MediaQuery.sizeOf(context).width < SizeConfig.tablet
           ? AppBar(
               backgroundColor: const Color(0xfff5f5f5),
               leading: IconButton(

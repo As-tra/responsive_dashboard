@@ -9,12 +9,14 @@ class DashboardDesktopLayout extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Row(
-      
       children: [
-        Expanded(child: CustomDrawer()),
+        Expanded(
+          flex: 2,
+          child: CustomDrawer(),
+        ),
         SizedBox(width: 32),
         Expanded(
-          flex: 5,
+          flex: 8,
           child: CustomScrollView(
             slivers: [
               SliverFillRemaining(
@@ -22,7 +24,7 @@ class DashboardDesktopLayout extends StatelessWidget {
                 child: Row(
                   children: [
                     Expanded(
-                      flex: 3,
+                      flex: 5,
                       child: Padding(
                         padding: EdgeInsets.only(top: 40.0),
                         child: AllExpensesAndQuickInvoices(),
@@ -30,7 +32,7 @@ class DashboardDesktopLayout extends StatelessWidget {
                     ),
                     SizedBox(width: 24),
                     Expanded(
-                      flex: 2,
+                      flex: 3,
                       child: CardsAndIcnomes(),
                     ),
                   ],
