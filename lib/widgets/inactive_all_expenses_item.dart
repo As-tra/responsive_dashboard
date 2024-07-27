@@ -29,11 +29,22 @@ class InActiveAllExpensesItem extends StatelessWidget {
         children: [
           AllExpensesItemHeader(image: itemModel.image),
           const SizedBox(height: 34),
-          Text(itemModel.title, style: Styles.styleSemiBold16(context)),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child:
+                Text(itemModel.title, style: Styles.styleSemiBold16(context)),
+          ),
           const SizedBox(height: 8),
-          Text(itemModel.date, style: Styles.styleRegular14(context)),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(itemModel.date, style: Styles.styleRegular14(context)),
+          ),
           const SizedBox(height: 16),
-          Text(itemModel.price, style: Styles.styleSemiBold24(context)),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child:
+                Text(itemModel.price, style: Styles.styleSemiBold24(context)),
+          ),
         ],
       ),
     );

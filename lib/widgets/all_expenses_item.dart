@@ -13,9 +13,9 @@ class AllExpensesItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return AnimatedSwitcher(
       duration: const Duration(milliseconds: 300),
-      transitionBuilder: (child, animation) {
-        return ScaleTransition(scale: animation, child: child);
-      },
+      // transitionBuilder: (child, animation) {
+      //   return ScaleTransition(scale: animation, child: child);
+      // },
       child: isSelected
           ? ActiveAllExpensesItem(itemModel: itemModel)
           : InActiveAllExpensesItem(itemModel: itemModel),

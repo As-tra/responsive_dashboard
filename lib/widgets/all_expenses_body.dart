@@ -6,6 +6,12 @@ import 'package:responsive_dashboard/widgets/all_expenses_item.dart';
 class AllExpensesBody extends StatefulWidget {
   const AllExpensesBody({super.key});
 
+  @override
+  State<AllExpensesBody> createState() => _AllExpensesBodyState();
+}
+
+class _AllExpensesBodyState extends State<AllExpensesBody> {
+  int currentValue = 0;
   static const List<AllExpensesItemModel> items = [
     AllExpensesItemModel(
       image: Assets.imagesMoney,
@@ -26,38 +32,55 @@ class AllExpensesBody extends StatefulWidget {
       price: r"$20.129",
     ),
   ];
-
-  @override
-  State<AllExpensesBody> createState() => _AllExpensesBodyState();
-}
-
-class _AllExpensesBodyState extends State<AllExpensesBody> {
-  int currentValue = 0;
-
   @override
   Widget build(BuildContext context) {
     return Row(
-        children: AllExpensesBody.items.asMap().entries.map(
-      (ele) {
-        return Expanded(
-          child: Padding(
-            padding: EdgeInsets.only(
-                right: ele.key != AllExpensesBody.items.length - 1 ? 12 : 0),
-            child: GestureDetector(
-              onTap: () {
-                setState(() {});
-                if (currentValue != ele.key) {
-                  currentValue = ele.key;
-                }
-              },
-              child: AllExpensesItem(
-                itemModel: ele.value,
-                isSelected: ele.key == currentValue,
-              ),
+      children: [
+        Expanded(
+          child: GestureDetector(
+            onTap: () {
+              setState(() {});
+              if (currentValue != 0) {
+                currentValue = 0;
+              }
+            },
+            child: AllExpensesItem(
+              itemModel: items[0],
+              isSelected: 0 == currentValue,
             ),
           ),
-        );
-      },
-    ).toList());
+        ),
+        const SizedBox(width: 8),
+        Expanded(
+          child: GestureDetector(
+            onTap: () {
+              setState(() {});
+              if (currentValue != 1) {
+                currentValue = 1;
+              }
+            },
+            child: AllExpensesItem(
+              itemModel: items[1],
+              isSelected: 1 == currentValue,
+            ),
+          ),
+        ),
+        const SizedBox(width: 8),
+        Expanded(
+          child: GestureDetector(
+            onTap: () {
+              setState(() {});
+              if (currentValue != 2) {
+                currentValue = 2;
+              }
+            },
+            child: AllExpensesItem(
+              itemModel: items[2],
+              isSelected: 2 == currentValue,
+            ),
+          ),
+        ),
+      ],
+    );
   }
 }

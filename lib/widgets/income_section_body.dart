@@ -12,28 +12,43 @@ class IncomeSectionBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.sizeOf(context).width;
-    return width >= SizeConfig.desktop && width < 1750
-        ? const Expanded(
-            child: Padding(
-              padding: EdgeInsets.all(16.0),
-              child: DetailedIncomeChart(),
+    if (width >= 1750) {
+      return const Expanded(
+        child: Row(
+          children: [
+            Expanded(
+              flex: 1,
+              child: IncomeChart(),
             ),
-          )
-        :
-        const Expanded(
-            child: Row(
-              children: [
-                Expanded(
-                  flex: 1,
-                  child: IncomeChart(),
-                ),
-                SizedBox(width: 40),
-                Expanded(
-                  flex: 2,
-                  child: IncomeDetails(),
-                ),
-              ],
+            SizedBox(width: 40),
+            Expanded(
+              flex: 2,
+              child: IncomeDetails(),
             ),
-          );
+          ],
+        ),
+      );
+    } else if (width >= SizeConfig.desktop && width < 1750) {
+      return const Expanded(
+        child: Padding(
+          padding: EdgeInsets.all(16.0),
+          child: DetailedIncomeChart(),
+        ),
+      );
+    } else {
+      return const Row(
+        children: [
+          Expanded(
+            flex: 1,
+            child: IncomeChart(),
+          ),
+          SizedBox(width: 40),
+          Expanded(
+            flex: 2,
+            child: IncomeDetails(),
+          ),
+        ],
+      );
+    }
   }
 }

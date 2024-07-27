@@ -12,20 +12,25 @@ class AllExpensesItemHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        CircleAvatar(
-          backgroundColor:
-              isActive ? Colors.white.withOpacity(.1) : const Color(0xffFAFAFA),
-          radius: 30,
-          child: SvgPicture.asset(
-            image,
-            colorFilter: ColorFilter.mode(
-                isActive ? Colors.white : kprimaryColor, BlendMode.srcIn),
+        Flexible(
+          child: CircleAvatar(
+            backgroundColor: isActive
+                ? Colors.white.withOpacity(.1)
+                : const Color(0xffFAFAFA),
+            radius: 30,
+            child: SvgPicture.asset(
+              image,
+              colorFilter: ColorFilter.mode(
+                  isActive ? Colors.white : kprimaryColor, BlendMode.srcIn),
+            ),
           ),
         ),
         const Spacer(),
-        Icon(
-          Icons.arrow_forward_ios_rounded,
-          color: isActive ? Colors.white : ksecondaryColor,
+        Flexible(
+          child: Icon(
+            Icons.arrow_forward_ios_rounded,
+            color: isActive ? Colors.white : ksecondaryColor,
+          ),
         ),
       ],
     );
